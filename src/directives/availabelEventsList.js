@@ -1,0 +1,15 @@
+// const availabelEventsList = [
+//     'click',
+//     'dblclick',
+//     'input',
+//     'keydown',
+//     'keypress',
+//     'keyup',
+//     'mousedown',
+//     'mouseenter',
+//     'mouseleave',
+//     'mousemove',
+//     'mouseout',
+//     'mouseover',
+//     'scroll',
+// ]

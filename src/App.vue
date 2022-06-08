@@ -1,11 +1,16 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Directives</router-link> |
+    <router-link to="/about">Intro</router-link> |
+    <router-link to="/core">Core</router-link>
   </nav>
-  <div v-ripple>這是按鈕</div>
+
+  <img alt="Vue logo" class="w-fit m-auto" src="./assets/logo.png">
   <router-view/>
 </template>
+
+<script setup>
+</script>
 
 <style lang="scss">
 #app {

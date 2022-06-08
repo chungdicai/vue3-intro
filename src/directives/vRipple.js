@@ -36,7 +36,7 @@ const handleRipple = (element, binding, ev) => {
 };
 
 const vRipple = {
-  bind: (el, binding) => {
+  mounted: (el, binding) => {
     el.style.position = 'relative';
     el.style.overflow = 'hidden';
     el.addEventListener('click', (ev) => handleRipple(el, binding, ev));
