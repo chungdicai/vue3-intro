@@ -16,10 +16,12 @@
     <h2>COUNTER</h2>
     <span class=" bg-green-500 px-4 py-2 my-2 rounded-md inline-block mx-2" v-ripple @click="countAdd" @keypress="countAdd">點擊增加次數 {{count}}</span>
     <span class=" bg-orange-500 px-4 py-2 my-2 rounded-md inline-block mx-2" v-ripple @click="countRemove" @keypress="countRemove">次數歸零</span>
+    <span class=" bg-orange-500 px-4 py-2 my-2 rounded-md inline-block mx-2" v-ripple @click="addRyderNipple" @keypress="addRyderNipple">次數歸零</span>
   </div>
 </template>
 
 <script>
+import { onMounted, ref, watchEffect } from 'vue';
 import {
   todo, items, add, remove,
 } from '../compositions/toDo';
@@ -28,8 +30,20 @@ import { add as countAdd, remove as countRemove, count } from '../compositions/c
 
 export default {
   setup() {
+    const ryder = ref(0);
+    const stop1 = watchEffect(() => {
+      if (ryder.value > 10) {
+        stop1();
+        console.log('stop', ryder.value);
+      }
+    });
+    const addRyderNipple = () => {
+      ryder.value++;
+    };
+    onMounted(() => {
+    });
     return {
-      todo, items, add, remove, countAdd, countRemove, count,
+      todo, items, add, remove, countAdd, countRemove, count, ryder, addRyderNipple,
     };
   },
 };

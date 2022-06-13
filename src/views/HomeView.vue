@@ -25,5 +25,10 @@ export default {
     console.log('HomeView', this.msg);
     this.hello();
   },
+  methods: {
+    hello() {
+      console.log('元件內hello');
+    },
+  },
 };
 </script>
